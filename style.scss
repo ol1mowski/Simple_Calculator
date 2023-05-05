@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$FontSize: 3rem;
+
+@mixin displayFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    @include displayFlex;
+}
+
+.container__calculator {
+    width: 30vw;
+    height: 70vh;
+    border: 2px solid #000;
+}
+
+.cocontainer__calculator__display {
+    font-size: $FontSize;
+    width: 100%;
+    height: 15vh;
+    @include displayFlex;
+}
+
+.container__calculator__numbers {
+    display: grid;
+    grid-template-columns: repeat(3, 100%);
+    grid-template-rows: repeat((6, 100%));
+    gap: 10px;
+    width: 100%;
+    height: 50vh;
+}
